@@ -2,8 +2,8 @@
 import "../styles/main.css";
 
 import Header from "../components/Header.astro";
-// import Footer from "../components/footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/footer.astro";
+// import { ViewTransitions } from "astro:transitions";
 
 const { PageTitle } = Astro.props;
 ---
@@ -21,25 +21,6 @@ const { PageTitle } = Astro.props;
     <main>
       <slot />
     </main>
-    <!-- <Footer Theme="dark" /> -->
+    <Footer Theme="dark" />
   </body>
 </html>
-
-<!-- ---
-import "../styles/main.css";
----
-
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>DIN TITEL HER. MÅSKE SOM PROP?</title>
-  </head>
-  <body>
-    <slot />
-  </body>
-</html>
-
-<style></style> -->
