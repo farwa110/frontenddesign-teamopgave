@@ -1,8 +1,10 @@
 ---
+//@ts-nocheck
 import Card from "../card.astro";
 import SectionHeader from "../SectionHeader.astro";
 
 // Fetch financial projections data from the API
+
 const financialProjections = await fetch("https://frontend-design-theme.netlify.app/api/financialProjections")
   .then((response) => response.json())
   .catch((error) => {
@@ -72,6 +74,7 @@ const header = {
 </style>
 
 <script>
+  //@ts-nocheck
   const scrollContainer = document.querySelector("main > section:nth-child(3) ul");
   const scrollCards = scrollContainer.querySelectorAll("li");
 
