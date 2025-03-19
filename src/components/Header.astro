@@ -140,7 +140,22 @@ const isOpen = false;
     }
   }
 </style>
-<script>
+{isMobileNavPage && (
+  <script>
+    //@ts-nocheck
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.getElementById("menu-icon");
+      const mobileNav = document.getElementById("mobile-nav");
+      if (menuIcon && mobileNav) {
+        menuIcon.addEventListener("click", () => {
+          mobileNav.classList.toggle("active");
+        });
+      }
+    });
+  </script>
+)}
+
+<!-- <script>
   //@ts-nocheck
   document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
@@ -155,4 +170,4 @@ const isOpen = false;
       console.error("Menu icon or mobile navigation not found.");
     }
   });
-</script>
+</script> -->
